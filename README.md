@@ -17,6 +17,7 @@ Also keep in mind that these might be my mistakes.
 - Cannot infer the correct type for endpoints that may return several response status (cf. compile errors in [`index.tsx`](./src/index.tsx))
 - Returning a 204 response yields a compile error (cf. compile errors in [`index.tsx`](./src/index.tsx))
 - Return type of `OpenAPIHono`'s `get` or other methods `Hono` already has is `Hono` instead of `OpenAPIHono`.
+- `OpenAPIHono` is not chainable after calling the `doc` method because it returns `void` (cf. [patch to the package](./patches/@hono+zod-openapi+0.7.1.patch))
 
 
 ## License
